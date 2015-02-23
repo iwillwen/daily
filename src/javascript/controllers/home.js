@@ -23,8 +23,8 @@
     scope.openZoom = openZoom;
     scope.hideZoom = hideZoom;
 
-    window.slides = null;
-    window.childrenSlides = {};
+    var slides = null;
+    var childrenSlides = {};
     var backgrounds = scope.backgrounds = [];
     var childrens = scope.childrens = {};
 
@@ -100,9 +100,6 @@
             }
           }
         });
-
-        // Load next page
-        // loadImage(1);
       }, 10);
     }
 
@@ -130,7 +127,6 @@
     }
 
     function loadChildImage(parentIndex, index) {
-      console.log(parentIndex, index);
       if (Array.isArray(scope.childrens[parentIndex]) && scope.childrens[parentIndex][index])
         return;
 

@@ -159,11 +159,6 @@
         gotoIndex = 0;
 
       gotoIndex = parseInt(gotoIndex);
-
-      // Slide to last visited index.
-      $timeout(function(){
-        // $ionicSlideBoxDelegate.slide(gotoIndex);
-      }, 300);
     }
   }
 
