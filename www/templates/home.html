@@ -44,16 +44,16 @@
 
         <!-- collection children -->
         <div class="swiper-container swiper-container-children"
-          ng-if="collection.images.length > 1">
+          ng-if="collection.images.length > 1" id="children-{{cIndex}}">
           <div class="swiper-wrapper">
             <div class="swiper-slide" 
               on-hold="share(image, collection.post)"
               on-double-tap="openZoom($index == 0 ? backgrounds[cIndex] : image.uri + '.jpg')"
-              ng-repeat="image in collection.images">
+              ng-repeat="image in collection.images" id="chilren-{{cIndex}}-{{$index}}">
 
               <div class="background-full">
                 <img class="background-medium" 
-                  ng-src="{{ $index == 0 ? backgrounds[cIndex] : image.uri + '.jpg' }}" />
+                  ng-src="{{childrens[cIndex][$index]}}" />
               </div>
 
               <div class="post">

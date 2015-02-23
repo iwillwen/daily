@@ -16,5 +16,10 @@
     "less": "~1.7.3",
     "uglify-js": "^2.4.15",
     "rewatch": "~0.2.2"
-  }
+  },
+  "cordovaPlugins": [
+    "org.apache.cordova.device",
+    "org.apache.cordova.dialogs",
+    "org.apache.cordova.statusbar"
+  ]
 }
